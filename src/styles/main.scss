@@ -1,5 +1,6 @@
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
 
 @font-face {
     font-family: Avenir;
@@ -14,6 +15,7 @@
 }
 
 * {
+    font-family: Avenir, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +23,6 @@
 
 body {
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 @mixin text($fontSize: 16px) {
@@ -32,7 +33,7 @@ body {
 
 @mixin title($fontSize: 40px) {
     @include text($fontSize);
-    color: variaveis.$corTextoSecudario;
+    color: variaveis.$corTextoSecundario;
 }
 
 .text--big {
@@ -62,6 +63,6 @@ body {
 
 .link-text {
     @include text(18px);
-    color: variaveis.$corTextoSecudario;
+    color: variaveis.$corTextoSecundario;
     text-decoration: underline;
 }
